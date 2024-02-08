@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 @Component({
   selector: 'app-maps-layout',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule,],
   templateUrl: './maps-layout.component.html',
   styleUrl: './maps-layout.component.css'
 })

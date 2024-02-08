@@ -1,0 +1,22 @@
+.loadingContainer{
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	height:100vh;
+	position: fixed;
+	right: 0px;
+	top: 0px;
+	width: 100vw;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	align-content: center;
+
+}
+
+.loadingMessage{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: center;
+}

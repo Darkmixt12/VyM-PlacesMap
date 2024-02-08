@@ -1,12 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { PlacesService } from '../../services';
+import { LoadingMapComponent } from '../../components/loading-map/loading-map.component';
+import { MapViewComponent } from '../../components/map-view/map-view.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-maps-page',
   standalone: true,
-  imports: [],
+  imports: [LoadingMapComponent, MapViewComponent, CommonModule],
   templateUrl: './maps-page.component.html',
   styleUrl: './maps-page.component.css'
 })
 export default class MapsPageComponent {
+
+  private placesService = inject(PlacesService)
+
+  constructor(){}
+
+
+  get isUserLocationReady(){
+    return this.placesService.isUserLocationReady;
+  }
 
 }

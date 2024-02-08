@@ -22,7 +22,7 @@ export class PlacesService {
         navigator.geolocation.getCurrentPosition(
           ({coords} ) =>  {
             
-            this.userLocation = ( [coords.longitude, coords.latitude] ) // mapbox trabaja con longitud y luego latitud si fuera con googlemaps se usa de manera contraria.
+            this.userLocation =  [coords.longitude, coords.latitude]  // mapbox trabaja con longitud y luego latitud si fuera con googlemaps se usa de manera contraria.
             resolve( this.userLocation)
         
         },

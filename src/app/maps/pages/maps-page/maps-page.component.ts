@@ -3,11 +3,12 @@ import { PlacesService } from '../../services';
 import { LoadingMapComponent } from '../../components/loading-map/loading-map.component';
 import { MapViewComponent } from '../../components/map-view/map-view.component';
 import { CommonModule } from '@angular/common';
+import { BtnMyLocationComponent } from '../../shared/components/btn-my-location/btn-my-location.component';
 
 @Component({
   selector: 'app-maps-page',
   standalone: true,
-  imports: [LoadingMapComponent, MapViewComponent, CommonModule],
+  imports: [LoadingMapComponent, MapViewComponent, CommonModule, BtnMyLocationComponent],
   templateUrl: './maps-page.component.html',
   styleUrl: './maps-page.component.css'
 })

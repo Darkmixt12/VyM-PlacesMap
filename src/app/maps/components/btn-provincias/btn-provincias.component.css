@@ -1,0 +1,108 @@
+.map-container{
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 100vw;
+	height: 100vh;
+}
+
+app-client-card{
+	position: absolute;
+	top: 150px;
+	left: 15px;
+}
+
+.btnContainer{
+	position: fixed;
+	top: 20px;
+	right: 30px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+	border: none;
+}
+
+.btnProvincia{
+	display: flex;
+	margin-left: auto;
+	right: 20px;
+	flex-direction: column;
+	margin-bottom: 10px;
+	border: none;
+}
+
+input{
+	position: fixed;
+	margin-top: 250px;
+	margin-right: 500px;
+}
+
+
+.btn{
+	margin-bottom: 10px;
+	border: none;
+}
+
+
+
+.btnSJ{
+	background: #2471A3;
+	
+}
+
+.btnCar{
+	background: #5DADE2;
+	border: none;
+}
+
+.btnHer{
+	background: #F1C40F;
+	
+}
+
+.btnAla{
+	background: #E91E63;
+}
+
+.btnLim{
+	background: #58D68D
+}
+
+.btnGua{
+	background: #8E44AD;
+}
+
+.btnPun{
+	background: #E67E22;
+}
+
+.btnAll{
+	color: black;
+	background: white;
+	border: 1px solid black;
+	margin-top: 10px;
+}
+
+p{
+	font-size: 12px;
+}
+
+h6{
+	font-size: 15px;
+	padding: 5px;
+}
+
+.locations-container{
+	display: flex;
+	margin-left: auto;
+	width: 200px;
+	height: 400px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	margin-left: auto;
+	margin-top: 400px;
+	z-index: 10000;
+}
+
+/*! POPUPS de los marcadores */
+

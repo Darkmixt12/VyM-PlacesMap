@@ -1,0 +1,79 @@
+<div>
+	<!--<app-client-card [itemHijo]="item"></app-client-card>-->
+	<div class="btnContainer">
+	  <button class="btnAll btn btn-primary" (click)="toogleLocations()">
+		Provincias
+	  </button>
+	
+	  <div *ngIf="hidePlaces" class="btnProvincia">
+		<button
+		  class="btnSJ btn btn-primary"
+		  (click)="markersByProv('San Jose', '#2471A3')"
+		>
+		  San Jose
+		</button>
+	
+		<button
+		  class="btnCar btn btn-primary"
+		  (click)="markersByProv('Cartago', '#5DADE2')"
+		>
+		  Cartago
+		</button>
+	
+		<button
+		  class="btnHer btn btn-primary"
+		  (click)="markersByProv('Heredia', '#F1C40F')"
+		>
+		  Heredia
+		</button>
+	
+		<button
+		  class="btnAla btn btn-primary"
+		  (click)="markersByProv('Alajuela', '#E91E63')"
+		>
+		  Alajuela
+		</button>
+	
+		<button
+		  class="btnLim btn btn-primary"
+		  (click)="markersByProv('Limon', '#58D68D')"
+		>
+		  Limon
+		</button>
+	
+		<button
+		  class="btnGua btn btn-primary"
+		  (click)="markersByProv('Guanacaste', '#8E44AD')"
+		>
+		  Guanacaste
+		</button>
+	
+		<button
+		  class="btnPun btn btn-primary"
+		  (click)="markersByProv('Puntarenas', '#E67E22')"
+		>
+		  Puntarenas
+		</button>
+
+		<button
+		class="btnPun btn btn-primary"
+		(click)="markersByProv('delete', '#E67E22')"
+	  >
+		Puntarenas
+	  </button>
+	  </div>
+	</div>
+	
+	<div *ngIf="hidePlaces" class="locations-container">
+	  <ul class="list-group mt-2">
+		<li
+		  *ngFor="let place of places"
+		  class="list-group-item list-group-item-action pointer"
+		  (click)="flyto(place)"
+		  (click)="getByIdPlace(place._id)"
+		>
+		  <h6>{{ place.title }}</h6> 
+		</li>
+	  </ul>
+	</div>
+  </div>

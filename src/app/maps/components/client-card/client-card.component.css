@@ -1,0 +1,138 @@
+.containerClient{
+	background-color: #fff;
+	position: absolute;
+	width: 300px;
+	border-radius: 10px;
+	padding: 5px;
+	box-shadow: 0 7px 25px rgba(0, 0, 0, 0.10);
+	margin-top: -20px;
+}
+
+.containerClient h1, h2{
+
+	display: flex;	
+	padding: 15px;
+	font-size: 16px;
+	text-align: center;
+	justify-content: space-around;
+	align-items: center;
+
+}
+
+.agenteTitle{
+	font-size: 18px;
+	color: #0c62c4
+}
+
+img{
+	width: 100%;
+	height: 200px;
+}
+
+
+.descriptionList ul li{
+	padding-top: 5px 5px 5px;
+	display: flex;
+	align-items: stretch;
+}
+
+.titles{
+	display: flex;
+	padding-top: 10px;
+	justify-content: center
+}
+
+li{
+	padding: 10px
+}
+
+li p{
+	margin-left: 20px
+}
+
+ul span{
+	color: rgb(43, 167, 205);
+}
+
+h1{
+	font-size: 20px;
+}
+
+/**  BTN MENUS*/
+
+.btnMenu{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+button{
+    color: #0671c3;
+	outline: none !important;
+    border: none;
+    background: transparent;
+  }
+
+  button:hover {
+    cursor: pointer;
+}
+
+.btnDel, .btnAdd, .btnEdit{
+	-webkit-box-flex:  1;
+	flex: 1 1 0px;
+	text-align: center;
+	margin: 5px;
+	border-radius: 100px;
+	border: none;
+
+	justify-content: center;
+}
+
+
+.material-symbols-outlined{
+	font-size: 30px;
+}
+
+.closeCard{
+	color: #E91E63;
+	border-radius: 5px;
+	padding: 3px;
+	margin-left: 268px;
+}
+
+.deletebtn{
+	color: #E91E63;
+}
+
+.newLocationbtn{
+	color: #58D68D;
+}
+
+
+
+@media only screen and (max-width: 400px) {
+
+.containerClient img {
+	display: none;
+}
+
+.containerClient .titles {
+	display: flex;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+}
+
+.titles{
+	padding: 1px;
+}
+
+.containerClient h1, h2{
+
+	display: flex;	
+	text-align: center;
+	justify-content: space-around;
+	align-items: center;
+
+}
+	
+	}

@@ -13,13 +13,13 @@ app-client-card{
 }
 
 .btnContainer{
-	position: fixed;
-	top: 20px;
-	right: 30px;
-	display: flex;
-	flex-direction: column;
-	margin-bottom: 10px;
-	border: none;
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: none;
 }
 
 .btnProvincia{
@@ -93,15 +93,16 @@ h6{
 }
 
 .locations-container{
-	display: flex;
-	margin-left: auto;
-	width: 200px;
-	height: 400px;
-	overflow-y: scroll;
-	overflow-x: hidden;
-	margin-left: auto;
-	margin-top: 400px;
-	z-index: 10000;
+    display: flex;
+    margin-left: auto;
+    width: 187px;
+    height: 351px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: auto;
+    margin-top: 500px;
+    z-index: 10000;
+    justify-content: center;
 }
 
 /*! POPUPS de los marcadores */

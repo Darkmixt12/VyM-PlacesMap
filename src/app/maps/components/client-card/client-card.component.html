@@ -1,0 +1,33 @@
+<div *ngIf="itemHijo?._id" class=" containerClient">
+	
+	<button class="material-symbols-outlined" (click)="hideCardClient()">close</button>
+	<img src="{{itemHijo?.image}}" alt="">
+	<section class="titles">
+		<h1> {{itemHijo?.title}} </h1>
+	</section>
+
+	<hr>
+
+	<br>
+
+	<section class="descriptionList">
+		<ul >
+			<li>
+				<span class="material-symbols-outlined">location_on</span>
+				<p> {{itemHijo?.provincia}}  </p>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">call</span>
+				<p> {{itemHijo?.telefono}} </p>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">mail</span>
+				<p> {{itemHijo?.email}} </p>
+			</li>
+			<li>
+				<span class="material-symbols-outlined">hallway</span>
+				<p> description </p>
+			</li>
+		</ul>
+	</section>
+</div>

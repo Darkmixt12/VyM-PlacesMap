@@ -3,11 +3,12 @@ import { Map, Popup, Marker, LngLatBounds } from 'mapbox-gl';
 import { LocationService, MapService, PlacesService } from '../../services';
 import { LocationsResponse, Places } from '../../interfaces';
 import { CommonModule } from '@angular/common';
+import { ClientCardComponent } from '../client-card/client-card.component';
 
 @Component({
   selector: 'app-btn-provincias',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ClientCardComponent],
   templateUrl: './btn-provincias.component.html',
   styleUrl: './btn-provincias.component.css'
 })
@@ -115,6 +116,8 @@ export class BtnProvinciasComponent implements OnInit {
       })
     
   }
+
+  
 
   
   

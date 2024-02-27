@@ -9,5 +9,11 @@ export interface LocationsResponse {
 	telefono: number;
 	email: string;
 	image: string
+	whatsApp?: string;
+	facebook?: string;
+	twitter?: string;
+	instagram?: string;
+	driveToLocation?: string;
+	webPage?: string;
 	__v?:         number;
 }

@@ -107,6 +107,23 @@ button{
 	color: #58D68D;
 }
 
+.btnFacebook{
+	font-size: 30px;
+	text-decoration: none;
+	color: #0671c3;
+}
+
+.btnWhatsApp{
+	font-size: 30px;
+	text-decoration: none;
+	color: #58D68D;
+}
+
+.btnInstagram{
+	font-size: 30px;
+	text-decoration: none;
+	color: #E91E63;
+}
 
 
 @media only screen and (max-width: 400px) {

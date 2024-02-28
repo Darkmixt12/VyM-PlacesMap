@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { PlacesService } from '../../services';
 import { LoadingMapComponent } from '../../components/loading-map/loading-map.component';
-import { MapViewComponent } from '../../components/map-view/map-view.component';
 import { CommonModule } from '@angular/common';
 import { BtnMyLocationComponent } from '../../shared/components/btn-my-location/btn-my-location.component';
 import { BtnProvinciasComponent } from '../../components/btn-provincias/btn-provincias.component';
@@ -9,7 +8,7 @@ import { BtnProvinciasComponent } from '../../components/btn-provincias/btn-prov
 @Component({
   selector: 'app-maps-page',
   standalone: true,
-  imports: [LoadingMapComponent, MapViewComponent, CommonModule, BtnMyLocationComponent, BtnProvinciasComponent],
+  imports: [LoadingMapComponent, CommonModule, BtnMyLocationComponent, BtnProvinciasComponent],
   templateUrl: './maps-page.component.html',
   styleUrl: './maps-page.component.css'
 })

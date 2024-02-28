@@ -1,2 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
+
+
+
+.mapboxgl-popup-close-button {
+	color: white;
+	
+	padding: 1px;
+	
+	left: 150px;
+	top: -15px
+  }
+
+.mapboxgl-popup-content {
+	font: 400 15px/22px 'Poppins', 'Helvetica Neue', sans-serif;
+	padding: 0;
+	width: 180px;
+  }
+
+
+
+.mapboxgl-popup-content h3 {
+	background: #555554;
+	color: #fff;
+	margin: 0;
+	padding: 10px;
+	border-radius: 3px 3px 0 0;
+	font-weight: 700;
+	margin-top: -15px;
+  font-size: 20px;
+  }
+
+  
+  .mapboxgl-popup-content p {
+	font-size: 13px;
+	  margin: 0;
+	  padding: 10px;
+	  font-weight: 100;
+	}

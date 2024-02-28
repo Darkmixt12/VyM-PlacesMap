@@ -18,7 +18,6 @@ export class ClientCardComponent {
     this.hidePlaces = !this.hidePlaces;
   }
 
-  
   hideCardClient(){
     this.itemHijo = undefined
   }

@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { LngLatLike, Map, Popup, Marker, LngLatBounds} from 'mapbox-gl'
+import { LngLatLike, Map} from 'mapbox-gl'
 import { LocationsResponse, Places } from '../interfaces';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
@@ -11,7 +11,6 @@ import { environment } from '../../environments/environments';
 export class MapService {
 
   private map?: Map;
-  private markers: Marker[] = [];
   public placesService: Places[] = [];
   private http = inject(HttpClient);
 
@@ -38,9 +37,6 @@ export class MapService {
 		let headers = new HttpHeaders().set('Content-Type', 'application/json')
 		return	this.http.get<LocationsResponse>(this.url+'place/'+id,{headers})
 	}
-
-
-
 
   flyto( coords: LngLatLike){
     if (!this.isMapReady) throw Error('El mapa no esta inicializado')

@@ -1,6 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild, inject } from '@angular/core';
 import { Map, Popup, Marker, LngLatBounds } from 'mapbox-gl';
-import { LocationService, MapService, PlacesService } from '../../services';
+import { MapService, PlacesService } from '../../services';
 import { LocationsResponse, Places } from '../../interfaces';
 import { CommonModule } from '@angular/common';
 import { ClientCardComponent } from '../client-card/client-card.component';
@@ -15,7 +15,6 @@ import { ClientCardComponent } from '../client-card/client-card.component';
 export class BtnProvinciasComponent implements OnInit {
   private _placesService = inject(PlacesService);
   private _mapService = inject(MapService);
-  private _locationService = inject(LocationService);
 
   private markers: Marker[] = [];
   public map?: Map;
@@ -25,11 +24,36 @@ export class BtnProvinciasComponent implements OnInit {
 
   @ViewChild('mapDiv')
   mapDivElement!: ElementRef;
-
   @Input() item?: LocationsResponse
+
+
 
   ngOnInit() {
     this.getListLocations();
+  }
+
+  flyto(place: Places) {
+    //this.selectLocation = place.id
+    const [lng, lat] = place.lngLat;
+    this._mapService.flyto([lng, lat]);
+  }
+
+  getListLocations() {
+    this._mapService
+      .getLocations()
+      .subscribe((locations) => (this.locationsList = locations));
+  }
+
+  getByIdPlace(id?: string) {
+      if (!id) return
+      this._mapService.getLocationById(id).subscribe( result => {
+        this.item = result
+      })
+    
+  }
+
+  toogleLocations() {
+    this.hidePlaces = !this.hidePlaces;
   }
 
   ngAfterViewInit(): void {
@@ -43,9 +67,10 @@ export class BtnProvinciasComponent implements OnInit {
       zoom: 8, // starting zoom
     });
 
+
     const popup = new Popup().setHTML(`
-          <h3>Aqui estoy</h3>
-          <p>Estoy en este lugar del Mundo</p>
+          <h3>Mi ubicación</h3>
+          <p>Aqui me encuentro</p>
         `);
 
     new Marker({ color: 'red' })
@@ -56,10 +81,6 @@ export class BtnProvinciasComponent implements OnInit {
     this._mapService.setMap(this.map);
   }
 
-  toogleLocations() {
-    this.hidePlaces = !this.hidePlaces;
-  }
-
   markersByProv(provincias?: string, color?: string) {
     if (!this.map) return;
 
@@ -68,8 +89,8 @@ export class BtnProvinciasComponent implements OnInit {
     this.locationsList.forEach((locationsList) => {
 
       const popup = new Popup().setHTML(`
-      <h3>${locationsList.provincia}</h3>
-      <p>${locationsList.title}</p>
+      <h3>${locationsList.title}</h3>
+      <p>${locationsList.description}</p>
     `);
 
       if (locationsList.provincia === provincias) {
@@ -96,26 +117,6 @@ export class BtnProvinciasComponent implements OnInit {
     this.map.fitBounds(bounds, { padding: 200 });
   }
 
-
-  flyto(place: Places) {
-    //this.selectLocation = place.id
-    const [lng, lat] = place.lngLat;
-    this._mapService.flyto([lng, lat]);
-  }
-
-  getListLocations() {
-    this._mapService
-      .getLocations()
-      .subscribe((locations) => (this.locationsList = locations));
-  }
-
-  getByIdPlace(id?: string) {
-      if (!id) return
-      this._mapService.getLocationById(id).subscribe( result => {
-        this.item = result
-      })
-    
-  }
 
   
 
